@@ -1,0 +1,46 @@
+﻿<Window x:Class="prowje_hoosh.Window1"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prowje_hoosh"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Window1" Height="600" Width="600" ResizeMode="NoResize" >
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="311,21,0,0" TextWrapping="Wrap" Text="starts by:" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Candara" FontSize="14"/>
+        <ListBox   ScrollViewer.ScrollChanged="lbox_ScrollChanged"  Name="lbox" Canvas.Left="48" Canvas.Top="-53" Margin="71,9,451.6,520.4" ScrollViewer.VerticalScrollBarVisibility="Auto" UseLayoutRounding="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="#FF547EF3">
+            <ListBox.Background>
+                <SolidColorBrush Color="#FF3059E4" Opacity="0.1"/>
+            </ListBox.Background>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Left" Margin="12,12,0,0" TextWrapping="Wrap" Text="number of points:" VerticalAlignment="Top" FontWeight="Bold" Height="40" Width="62" FontSize="11" FontFamily="Candara"/>
+        <Button Content="play" HorizontalAlignment="Left" Margin="473,13,0,0" VerticalAlignment="Top" Width="97" Click="Button_Click" RenderTransformOrigin="0.501,-0.135" Height="32" FontWeight="Bold" Background="#FF3482D7"/>
+        <RadioButton Content="player" HorizontalAlignment="Left" IsChecked="True" Margin="381,12,0,0" VerticalAlignment="Top" Background="#FF5B6FFF" Checked="RadioButton_Checked" Foreground="#FF2400D7"/>
+        <RadioButton  Content="computer" HorizontalAlignment="Left" Margin="381,30,0,0" VerticalAlignment="Top" Background="#FFFF6868" Foreground="#FFC30B0B" BorderBrush="#FFB73A67" Checked="RadioButton_Checked_1"/>
+      
+            <Canvas  Name="paintSurface" MouseUp="paintSurface_MouseUp_1"  MouseDown="Canvas_MouseDown_1" MouseMove="Canvas_MouseMove_1" Margin="0,55,-0.4,0" Height="515" VerticalAlignment="Top" HorizontalAlignment="Right" Width="594" >
+            <Canvas.Background>
+                <SolidColorBrush Color="#FF4998FA" Opacity="0.06"/>
+            </Canvas.Background>
+        </Canvas>
+        <GridSplitter HorizontalAlignment="Left" Height="55" Margin="298,0,0,0" VerticalAlignment="Top" Width="5">
+            <GridSplitter.Background>
+                <SolidColorBrush Color="#FFDCEAEB" Opacity="0.5"/>
+            </GridSplitter.Background>
+        </GridSplitter>
+        <GridSplitter HorizontalAlignment="Left" Height="55" Margin="460,0,0,0" VerticalAlignment="Top" Width="5">
+            <GridSplitter.Background>
+                <SolidColorBrush Color="#FFF0F0F0" Opacity="0.5"/>
+            </GridSplitter.Background>
+        </GridSplitter>
+        <Label Content="  " HorizontalContentAlignment="Center" Name="TB" HorizontalAlignment="Left"  Margin="381,60,0,0" VerticalAlignment="Top" Width="189" Foreground="#FF008C9A" FontSize="14"/>
+        <ListBox   ScrollViewer.ScrollChanged="lbox_Copy_ScrollChanged"  x:Name="lbox_Copy" Margin="218,10,304.6,519.4" ScrollViewer.VerticalScrollBarVisibility="Auto" UseLayoutRounding="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="#FF547EF3">
+            <ListBox.Background>
+                <SolidColorBrush Color="#FF3059E4" Opacity="0.1"/>
+            </ListBox.Background>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Left" Margin="153,11,0,0" TextWrapping="Wrap" Text="tree depth(hardness):" VerticalAlignment="Top" FontWeight="Bold" Height="40" Width="67" FontSize="11" FontFamily="Candara"/>
+    </Grid>
+</Window>
